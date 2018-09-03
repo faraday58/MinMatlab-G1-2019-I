@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MinMatlab_G1_2019_I
@@ -15,6 +9,11 @@ namespace MinMatlab_G1_2019_I
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnIntro_Click(object sender, EventArgs e)
+        {
+          lbMatriz1.Text=  Unidimensional.Leer(txtbMatrizEntrada.Text).ToString() ;
         }
     }
 }
