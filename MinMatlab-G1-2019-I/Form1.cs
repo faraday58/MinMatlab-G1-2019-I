@@ -10,6 +10,10 @@ namespace MinMatlab_G1_2019_I
         Unidimensional u2;
         Unidimensional u3;
 
+        Multidimensional m1;
+        Multidimensional m2;
+        Multidimensional m3;
+
 
         public Form1()
         {
@@ -20,8 +24,17 @@ namespace MinMatlab_G1_2019_I
         {
             try
             {
-                u1 = Unidimensional.Leer(txtbMatrizEntrada.Text);
-                lbMatriz1.Text = u1.ToString();
+                if( txtbMatrizEntrada.Text.Contains(";")  )
+                {
+                    m1 = Multidimensional.Leer(txtbMatrizEntrada.Text);
+                    lbMatriz1.Text = m1.ToString();
+                }
+                else
+                {
+                    u1 = Unidimensional.Leer(txtbMatrizEntrada.Text);
+                    lbMatriz1.Text = u1.ToString();
+                }
+                
                 errorProv.Clear();
             }
             catch(FormatException error)
