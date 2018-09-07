@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtbMatrizEntrada = new System.Windows.Forms.TextBox();
             this.btnSumar = new System.Windows.Forms.Button();
             this.btnRestar = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.lbMatriz1 = new System.Windows.Forms.Label();
             this.lbMatriz2 = new System.Windows.Forms.Label();
             this.btnIntro = new System.Windows.Forms.Button();
+            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbMatrizEntrada
@@ -52,6 +55,7 @@
             this.btnSumar.TabIndex = 1;
             this.btnSumar.Text = "+";
             this.btnSumar.UseVisualStyleBackColor = true;
+            this.btnSumar.Click += new System.EventHandler(this.btnSumar_Click);
             // 
             // btnRestar
             // 
@@ -99,6 +103,10 @@
             this.btnIntro.UseVisualStyleBackColor = true;
             this.btnIntro.Click += new System.EventHandler(this.btnIntro_Click);
             // 
+            // errorProv
+            // 
+            this.errorProv.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +121,7 @@
             this.Controls.Add(this.txtbMatrizEntrada);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +136,7 @@
         private System.Windows.Forms.Label lbMatriz1;
         private System.Windows.Forms.Label lbMatriz2;
         private System.Windows.Forms.Button btnIntro;
+        private System.Windows.Forms.ErrorProvider errorProv;
     }
 }
 

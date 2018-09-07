@@ -26,6 +26,18 @@ namespace MinMatlab_G1_2019_I
 
         }
 
+        public static Unidimensional operator +(Unidimensional u1 , Unidimensional u2)
+        {
+            Unidimensional u3 = new Unidimensional(u1.N);
+            for( int i=0; i < u3.N; i++)
+            {
+                u3.matriz[i] = u1.matriz[i] + u2.matriz[i];
+            }
+            return u3;
+        }
+
+
+
         public override string ToString()
         {
             string aux="";
